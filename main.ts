@@ -342,6 +342,11 @@ timer.after(20000, function () {
     pause(4000)
 })
 forever(function () {
+    timer.after(300000, function () {
+        game.gameOver(true)
+    })
+})
+forever(function () {
     music.play(music.stringPlayable("C5 B A B C5 G F E ", 154), music.PlaybackMode.UntilDone)
 })
 forever(function () {
